@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+//Compiler version g++ 6.3.0
+
+int main()
+{
+    int score = 0;
+    int total_score = 0;
+    char grade = ' ';
+    
+    cout << "Welcome to Professor Krelina's Introduction To Programming course. " << endl;
+    cout << "Please, enter the total points that you have obtained on the tests and projects. " << endl;
+    cout << "Enter first score, negative number to stop: " << endl;
+    
+    cin >> score;
+    
+    while (score >= 0)
+    
+    {
+      total_score = total_score + score;
+      
+      cout << "Please enter the next score, negative number to stop: " << endl;
+      cin >> score;
+      
+    }
+    
+    if (total_score >= 360)
+       grade = 'A';
+       
+    else if (total_score >= 320)
+       grade = 'B';
+      
+    else if (total_score >= 280)
+       grade = 'C';
+       
+    else if (total_score >= 240)
+       grade = 'D';
+       
+    else grade = 'F';
+    
+    cout << "Total Points: " << total_score << endl;
+    cout << "Grade: " << grade << endl;
+   
+   return 0;
+}
